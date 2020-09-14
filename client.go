@@ -167,17 +167,27 @@ func authenticationHook(key, secret string) snorlax.RequestHook {
 		}
 
 		timestamp := strconv.FormatInt(time.Now().UnixNano()/1e6, 10)
-		mac := hmac.New(sha512.New, []byte(secret))
-		mac.Write([]byte(timestamp))
-		mac.Write([]byte(strings.ToUpper(r.Method)))
-		mac.Write(body)
+		signature := generateAuthSignature(secret, timestamp, r.Method,
+			r.URL.Path, body)
 
 		r.Header.Set("X-VALR-API-KEY", key)
-		r.Header.Set("X-VALR-SIGNATURE", hex.EncodeToString(mac.Sum(nil)))
+		r.Header.Set("X-VALR-SIGNATURE", signature)
 		r.Header.Set("X-VALR-TIMESTAMP", timestamp)
 
 		return nil
 	}
+}
+
+func generateAuthSignature(secret string, timestamp, method, path string,
+	body []byte) string {
+
+	mac := hmac.New(sha512.New, []byte(secret))
+	mac.Write([]byte(timestamp))
+	mac.Write([]byte(strings.ToUpper(method)))
+	mac.Write([]byte(path))
+	mac.Write(body)
+
+	return hex.EncodeToString(mac.Sum(nil))
 }
 
 // ToPrivateClient converts a PublicClient to a PrivateClient.
