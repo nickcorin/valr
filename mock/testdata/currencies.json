@@ -1,0 +1,347 @@
+
+
+[
+  {
+    "symbol": "R",
+    "isActive": true,
+    "shortName": "ZAR",
+    "longName": "Rand"
+  },
+  {
+    "symbol": "BTC",
+    "isActive": true,
+    "shortName": "BTC",
+    "longName": "Bitcoin"
+  },
+  {
+    "symbol": "ETH",
+    "isActive": true,
+    "shortName": "ETH",
+    "longName": "Ethereum"
+  },
+  {
+    "symbol": "LTC",
+    "isActive": true,
+    "shortName": "LTC",
+    "longName": "Litecoin"
+  },
+  {
+    "symbol": "ADA",
+    "isActive": true,
+    "shortName": "ADA",
+    "longName": "Cardano"
+  },
+  {
+    "symbol": "ZEC",
+    "isActive": true,
+    "shortName": "ZEC",
+    "longName": "Zcash"
+  },
+  {
+    "symbol": "DASH",
+    "isActive": true,
+    "shortName": "DASH",
+    "longName": "Dash"
+  },
+  {
+    "symbol": "XMR",
+    "isActive": true,
+    "shortName": "XMR",
+    "longName": "Monero"
+  },
+  {
+    "symbol": "XEM",
+    "isActive": true,
+    "shortName": "XEM",
+    "longName": "NEM"
+  },
+  {
+    "symbol": "PIVX",
+    "isActive": true,
+    "shortName": "PIVX",
+    "longName": "Pivx"
+  },
+  {
+    "symbol": "LSK",
+    "isActive": true,
+    "shortName": "LSK",
+    "longName": "Lisk"
+  },
+  {
+    "symbol": "ETC",
+    "isActive": true,
+    "shortName": "ETC",
+    "longName": "Ethereum Classic"
+  },
+  {
+    "symbol": "REP",
+    "isActive": true,
+    "shortName": "REP",
+    "longName": "Augur"
+  },
+  {
+    "symbol": "SWT",
+    "isActive": true,
+    "shortName": "SWT",
+    "longName": "Swarm City Token"
+  },
+  {
+    "symbol": "MLN",
+    "isActive": true,
+    "shortName": "MLN",
+    "longName": "Melon"
+  },
+  {
+    "symbol": "GNT",
+    "isActive": true,
+    "shortName": "GNT",
+    "longName": "Golem"
+  },
+  {
+    "symbol": "GNO",
+    "isActive": true,
+    "shortName": "GNO",
+    "longName": "Gnosis"
+  },
+  {
+    "symbol": "SC",
+    "isActive": true,
+    "shortName": "SC",
+    "longName": "Siacoin"
+  },
+  {
+    "symbol": "BAT",
+    "isActive": true,
+    "shortName": "BAT",
+    "longName": "Basic Attention Token"
+  },
+  {
+    "symbol": "PAY",
+    "isActive": true,
+    "shortName": "PAY",
+    "longName": "TenX Pay Token"
+  },
+  {
+    "symbol": "OMG",
+    "isActive": true,
+    "shortName": "OMG",
+    "longName": "OmiseGO"
+  },
+  {
+    "symbol": "CVC",
+    "isActive": true,
+    "shortName": "CVC",
+    "longName": "Civic"
+  },
+  {
+    "symbol": "QTUM",
+    "isActive": true,
+    "shortName": "QTUM",
+    "longName": "Qtum"
+  },
+  {
+    "symbol": "BCH",
+    "isActive": true,
+    "shortName": "BCH",
+    "longName": "Bitcoin Cash"
+  },
+  {
+    "symbol": "ZRX",
+    "isActive": true,
+    "shortName": "ZRX",
+    "longName": "0x Protocol"
+  },
+  {
+    "symbol": "TRX",
+    "isActive": true,
+    "shortName": "TRX",
+    "longName": "TRON"
+  },
+  {
+    "symbol": "TUSD",
+    "isActive": true,
+    "shortName": "TUSD",
+    "longName": "TrueUSD"
+  },
+  {
+    "symbol": "SNT",
+    "isActive": true,
+    "shortName": "SNT",
+    "longName": "Status Network Token"
+  },
+  {
+    "symbol": "GAME",
+    "isActive": true,
+    "shortName": "GAME",
+    "longName": "GameCredits"
+  },
+  {
+    "symbol": "XRP",
+    "isActive": true,
+    "shortName": "XRP",
+    "longName": "Ripple"
+  },
+  {
+    "symbol": "XLM",
+    "isActive": true,
+    "shortName": "XLM",
+    "longName": "Lumen"
+  },
+  {
+    "symbol": "DCR",
+    "isActive": true,
+    "shortName": "DCR",
+    "longName": "Decred"
+  },
+  {
+    "symbol": "ANT",
+    "isActive": true,
+    "shortName": "ANT",
+    "longName": "Aragon"
+  },
+  {
+    "symbol": "SALT",
+    "isActive": true,
+    "shortName": "SALT",
+    "longName": "Salt"
+  },
+  {
+    "symbol": "DNT",
+    "isActive": true,
+    "shortName": "DNT",
+    "longName": "District0x"
+  },
+  {
+    "symbol": "BNT",
+    "isActive": true,
+    "shortName": "BNT",
+    "longName": "Bancor"
+  },
+  {
+    "symbol": "GUP",
+    "isActive": true,
+    "shortName": "GUP",
+    "longName": "Guppy"
+  },
+  {
+    "symbol": "NMR",
+    "isActive": true,
+    "shortName": "NMR",
+    "longName": "Numeraire"
+  },
+  {
+    "symbol": "RLC",
+    "isActive": true,
+    "shortName": "RLC",
+    "longName": "iEx.ec"
+  },
+  {
+    "symbol": "WAVES",
+    "isActive": true,
+    "shortName": "WAVES",
+    "longName": "Waves"
+  },
+  {
+    "symbol": "WINGS",
+    "isActive": true,
+    "shortName": "WINGS",
+    "longName": "Wings"
+  },
+  {
+    "symbol": "STORJ",
+    "isActive": true,
+    "shortName": "STORJ",
+    "longName": "Storj"
+  },
+  {
+    "symbol": "RCN",
+    "isActive": true,
+    "shortName": "RCN",
+    "longName": "Ripio Credit Network"
+  },
+  {
+    "symbol": "DGB",
+    "isActive": true,
+    "shortName": "DGB",
+    "longName": "Digibyte"
+  },
+  {
+    "symbol": "SLR",
+    "isActive": true,
+    "shortName": "SLR",
+    "longName": "SolarCoin"
+  },
+  {
+    "symbol": "GRS",
+    "isActive": false,
+    "shortName": "GRS",
+    "longName": "Groestlcoin"
+  },
+  {
+    "symbol": "MONA",
+    "isActive": true,
+    "shortName": "MONA",
+    "longName": "MonaCoin"
+  },
+  {
+    "symbol": "EXP",
+    "isActive": true,
+    "shortName": "EXP",
+    "longName": "Expanse"
+  },
+  {
+    "symbol": "FCT",
+    "isActive": false,
+    "shortName": "FCT",
+    "longName": "Factom"
+  },
+  {
+    "symbol": "OCN",
+    "isActive": true,
+    "shortName": "OCN",
+    "longName": "Odyssey"
+  },
+  {
+    "symbol": "POLY",
+    "isActive": true,
+    "shortName": "POLY",
+    "longName": "Polymath"
+  },
+  {
+    "symbol": "VIB",
+    "isActive": true,
+    "shortName": "VIB",
+    "longName": "Viberate"
+  },
+  {
+    "symbol": "STORM",
+    "isActive": true,
+    "shortName": "STORM",
+    "longName": "Storm"
+  },
+  {
+    "symbol": "DOGE",
+    "isActive": true,
+    "shortName": "DOGE",
+    "longName": "DogeCoin"
+  },
+  {
+    "symbol": "VTC",
+    "isActive": true,
+    "shortName": "VTC",
+    "longName": "Vertcoin"
+  },
+  {
+    "symbol": "KMD",
+    "isActive": true,
+    "shortName": "KMD",
+    "longName": "Komodo"
+  },
+  {
+    "symbol": "BSV",
+    "isActive": true,
+    "shortName": "BSV",
+    "longName": "Bitcoin SV"
+  }
+]
+
