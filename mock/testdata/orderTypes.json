@@ -1,0 +1,551 @@
+
+
+[
+  {
+    "currencyPair": "BTCZAR",
+    "orderTypes": [
+      "post-only limit",
+      "limit",
+      "market"
+    ]
+  },
+  {
+    "currencyPair": "ETHZAR",
+    "orderTypes": [
+      "post-only limit",
+      "market",
+      "limit"
+    ]
+  },
+  {
+    "currencyPair": "ETHBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "LTCBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "LTCETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ADAETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ZECBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ZECETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DASHBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DASHETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XMRBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XMRETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XEMBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XEMETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ADABTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ANTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ANTETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BATBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BATETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BNTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BNTETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "CVCBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "CVCETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BCHBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BCHETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DCRBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DGBBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DGBETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DNTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ETCBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ETCETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "EXPBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GAMEBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GNOBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GNOETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GNTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GNTETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GRSBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "GUPBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "LSKBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "MLNBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "MONABTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "NMRBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "OMGBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "OMGETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "PAYBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "PAYETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "PIVXBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "QTUMBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "QTUMETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "RCNBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "REPBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "REPETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "RLCBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SALTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SCBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SCETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SLRBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SNTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SNTETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "STORJBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SWTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "WAVESBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "WAVESETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "TRXBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "TRXETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "TUSDBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "TUSDETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "FCTBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "WINGSBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XLMBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XLMETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XRPBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "XRPETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ZRXBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "ZRXETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "OCNBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "OCNETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "POLYBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "POLYETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "VIBBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "VIBETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "STORMBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "STORMETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "DOGEBTC",
+    "orderTypes": []
+  },
+  {
+    "currencyPair": "VTCBTC",
+    "orderTypes": []
+  },
+  {
+    "currencyPair": "KMDBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BSVBTC",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "BSVETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "SALTETH",
+    "orderTypes": [
+      "simple"
+    ]
+  },
+  {
+    "currencyPair": "RLCETH",
+    "orderTypes": [
+      "simple"
+    ]
+  }
+]
+

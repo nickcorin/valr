@@ -68,6 +68,43 @@ func (suite *PublicTestSuite) TestPublicClient_OrderBook() {
 	suite.Require().NotNil(book)
 	suite.Require().Len(book.Asks, 9)
 	suite.Require().Len(book.Bids, 11)
+
+	ask := valr.OrderBookEntry{
+		CurrencyPair: "BTCZAR",
+		OrderCount:   1,
+		Price:        "9000",
+		Quantity:     "0.101",
+		Side:         "sell",
+	}
+
+	bid := valr.OrderBookEntry{
+		CurrencyPair: "BTCZAR",
+		OrderCount:   1,
+		Price:        "8802",
+		Quantity:     "0.1",
+		Side:         "buy",
+	}
+
+	suite.Require().Equal(ask, book.Asks[0])
+	suite.Require().Equal(bid, book.Bids[0])
+
+}
+
+func (suite *PublicTestSuite) TestPublicClient_OrderTypes() {
+	types, err := suite.client.OrderTypes(context.TODO())
+	suite.Require().NoError(err)
+	suite.Require().NotNil(types)
+	suite.Require().Len(types, 91)
+
+	btczar := map[valr.OrderType]bool{
+		valr.OrderTypePostOnly: true,
+		valr.OrderTypeLimit:    true,
+		valr.OrderTypeMarket:   true,
+	}
+
+	for k, v := range btczar {
+		suite.Require().Equal(v, types["BTCZAR"][k])
+	}
 }
 
 func (suite *PublicTestSuite) TestPublicClient_ServerTime() {

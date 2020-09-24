@@ -205,6 +205,7 @@ func (c *client) OrderTypes(ctx context.Context) (map[string]map[OrderType]bool,
 
 	typesMap := make(map[string]map[OrderType]bool)
 	for _, pair := range types {
+		typesMap[pair.Pair] = make(map[OrderType]bool)
 		for _, typ := range pair.OrderTypes {
 			typesMap[pair.Pair][typ] = true
 		}
