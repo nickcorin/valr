@@ -4,6 +4,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"path/filepath"
 
 	"github.com/gorilla/mux"
 )
@@ -23,8 +24,26 @@ func NewServer() *Server {
 }
 
 func registerRoutes(r *mux.Router) {
-	r.HandleFunc("/public/{currencyPair}/orderbook", orderBookHandler)
-	r.HandleFunc("/public/time", serverTimeHandler)
+	r.HandleFunc("/public/currencies", makeHandler("currencies.json"))
+	r.HandleFunc("/public/pairs", makeHandler("currencyPairs.json"))
+	r.HandleFunc("/public/{currencyPair}/orderbook",
+		makeHandler("orderBook.json"))
+	r.HandleFunc("/public/time", makeHandler("serverTime.json"))
+}
+
+const testDir = "mock/testdata"
+
+func makeHandler(responseFile string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		res, err := readResponseFile(filepath.Join(testDir, responseFile))
+		if err != nil {
+			serverError(w, err)
+			return
+		}
+
+		w.WriteHeader(http.StatusOK)
+		w.Write(res)
+	}
 }
 
 func readResponseFile(filepath string) ([]byte, error) {
@@ -34,26 +53,4 @@ func readResponseFile(filepath string) ([]byte, error) {
 func serverError(w http.ResponseWriter, err error) {
 	w.WriteHeader(http.StatusInternalServerError)
 	w.Write([]byte(err.Error()))
-}
-
-func orderBookHandler(w http.ResponseWriter, r *http.Request) {
-	res, err := readResponseFile("mock/testdata/orderBook.json")
-	if err != nil {
-		serverError(w, err)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	w.Write(res)
-}
-
-func serverTimeHandler(w http.ResponseWriter, r *http.Request) {
-	res, err := readResponseFile("mock/testdata/serverTime.json")
-	if err != nil {
-		serverError(w, err)
-		return
-	}
-
-	w.WriteHeader(http.StatusOK)
-	w.Write(res)
 }

@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"net/url"
 	"strconv"
 	"strings"
 	"testing"
@@ -96,7 +95,6 @@ var defaultBaseURL = "https://api.valr.com/api/v1"
 var DefaultClient PublicClient = &client{
 	apiKey:    "",
 	apiSecret: "",
-	baseURL:   defaultBaseURL,
 	httpClient: snorlax.DefaultClient.
 		SetBaseURL(defaultBaseURL).
 		SetHeader(http.CanonicalHeaderKey("Content-Type"), "application/json"),
@@ -118,7 +116,7 @@ func NewClient(key, secret string) Client {
 // purposes.
 func NewClientForTesting(_ *testing.T, baseURL string) Client {
 	c := NewClient("", "").(*client)
-	c.setBaseURL(baseURL)
+	c.httpClient.SetBaseURL(baseURL)
 
 	return c
 }
@@ -133,19 +131,6 @@ type client struct {
 	apiSecret  string
 	baseURL    string
 	httpClient snorlax.Client
-}
-
-func (c *client) setBaseURL(u string) Client {
-	baseURL, err := url.Parse(u)
-	if err != nil {
-		// TODO: Add logs to indicate that this failed.
-		return c
-	}
-
-	c.httpClient.SetBaseURL(baseURL.String())
-	c.baseURL = baseURL.String()
-
-	return c
 }
 
 func authenticationHook(key, secret string) snorlax.RequestHook {

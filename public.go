@@ -21,6 +21,11 @@ func (c *client) Currencies(ctx context.Context) ([]Currency, error) {
 		return nil, fmt.Errorf("failed to fetch currencies: %w", err)
 	}
 
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch currencies: %d status code "+
+			"received", res.StatusCode)
+	}
+
 	var currencies []Currency
 	if err = res.JSON(&currencies); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal currencies: %w", err)
@@ -47,6 +52,11 @@ func (c *client) CurrencyPairs(ctx context.Context) ([]CurrencyPair, error) {
 	res, err := c.httpClient.Get(ctx, "/public/pairs", nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch currency pairs: %w", err)
+	}
+
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch currency pairs: %d status "+
+			"code received", res.StatusCode)
 	}
 
 	var pairs []CurrencyPair
@@ -79,6 +89,11 @@ func (c *client) MarketSummary(ctx context.Context) ([]MarketSummary, error) {
 		return nil, fmt.Errorf("failed to fetch the market summaries: %w", err)
 	}
 
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch market summary: %d status "+
+			"code received", res.StatusCode)
+	}
+
 	var summaries []MarketSummary
 	if err = res.JSON(&summaries); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal market summaries: %w", err)
@@ -94,6 +109,11 @@ func (c *client) MarketSummaryForCurrency(ctx context.Context, pair string) (
 		pair), nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch the market summaries: %w", err)
+	}
+
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch market summaries: %d status "+
+			"code received", res.StatusCode)
 	}
 
 	var summary MarketSummary
@@ -130,6 +150,11 @@ func (c *client) OrderBook(ctx context.Context, pair string) (*OrderBook,
 		return nil, fmt.Errorf("failed to fetch order book: %w", err)
 	}
 
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch order book: %d status code "+
+			"received", res.StatusCode)
+	}
+
 	var book OrderBook
 	if err = res.JSON(&book); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal order book: %w", err)
@@ -164,6 +189,11 @@ func (c *client) OrderTypes(ctx context.Context) (map[string]map[OrderType]bool,
 		return nil, fmt.Errorf("failed to fetch order types: %w", err)
 	}
 
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch order types: %d status code "+
+			"received", res.StatusCode)
+	}
+
 	types := []struct {
 		Pair       string      `json:"currencyPair"`
 		OrderTypes []OrderType `json:"orderTypes"`
@@ -192,8 +222,12 @@ func (c *client) OrderTypesForCurrency(ctx context.Context, pair string) (
 		return nil, fmt.Errorf("failed to fetch order types for pair: %w", err)
 	}
 
-	var orderTypes []OrderType
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch order types: %d status code "+
+			"received", res.StatusCode)
+	}
 
+	var orderTypes []OrderType
 	if err = res.JSON(&orderTypes); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal order types: %w", err)
 	}
@@ -217,6 +251,11 @@ func (c *client) ServerTime(ctx context.Context) (*ServerTime, error) {
 	res, err := c.httpClient.Get(ctx, "/public/time", nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch server time: %w", err)
+	}
+
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch server time: %d status code "+
+			"received", res.StatusCode)
 	}
 
 	var serverTime ServerTime
@@ -248,6 +287,11 @@ func (c *client) Status(ctx context.Context) (Status, error) {
 	res, err := c.httpClient.Get(ctx, "/public/status", nil)
 	if err != nil {
 		return StatusUnknown, fmt.Errorf("failed to fetch status: %w", err)
+	}
+
+	if !res.IsSuccess() {
+		return StatusUnknown, fmt.Errorf("failed to fetch status: %d status "+
+			"code received", res.StatusCode)
 	}
 
 	var status Status
