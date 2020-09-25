@@ -10,11 +10,16 @@ import (
 	"github.com/stretchr/testify/suite"
 )
 
+func TestPublicTestSuite(t *testing.T) {
+	suite.Run(t, new(PublicTestSuite))
+}
+
 type PublicTestSuite struct {
 	suite.Suite
 	client valr.PublicClient
 	server *mock.Server
 }
+
 
 func (suite *PublicTestSuite) SetupSuite() {
 	suite.server = mock.NewServer()
@@ -60,6 +65,49 @@ func (suite *PublicTestSuite) TestPublicClient_CurrencyPairs() {
 	}
 
 	suite.Require().EqualValues(btczar, pairs[0])
+}
+
+func (suite *PublicTestSuite) TestPublicClient_MarketSummary() {
+	summary, err := suite.client.MarketSummary(context.TODO())
+	suite.Require().NoError(err)
+	suite.Require().NotNil(summary)
+
+	btczar := valr.MarketSummary{
+		AskPrice: "10000",
+		BaseVolume: "0.16065663",
+		BidPrice: "7005",
+		ChangeFromPrevious: "0",
+		CurrencyPair: "BTCZAR",
+		CreatedAt: time.Date(2019, 4, 20, 13, 02, 03, 228000000, time.UTC),
+		HighPrice: "10000",
+		LastTradedPrice: "7005",
+		LowPrice: "7005",
+		PreviousClosePrice: "7005",
+	}
+
+	suite.Require().EqualValues(btczar, summary[0])
+}
+
+func (suite *PublicTestSuite) TestPublicClient_MarketSummaryForCurrency() {
+	summary, err := suite.client.MarketSummaryForCurrency(context.TODO(),
+		"BTCZAR")
+	suite.Require().NoError(err)
+	suite.Require().NotNil(summary)
+
+	btczar := &valr.MarketSummary{
+		AskPrice: "10000",
+		BaseVolume: "0.16065663",
+		BidPrice: "7005",
+		ChangeFromPrevious: "0",
+		CurrencyPair: "BTCZAR",
+		CreatedAt: time.Date(2019, 4, 20, 13, 03, 03, 230000000, time.UTC),
+		HighPrice: "10000",
+		LastTradedPrice: "7005",
+		LowPrice: "7005",
+		PreviousClosePrice: "7005",
+	}
+
+	suite.Require().EqualValues(btczar, summary)
 }
 
 func (suite *PublicTestSuite) TestPublicClient_OrderBook() {
@@ -120,6 +168,8 @@ func (suite *PublicTestSuite) TestPublicClient_ServerTime() {
 	suite.Require().EqualValues(&serverTime, res)
 }
 
-func TestPublicTestSuite(t *testing.T) {
-	suite.Run(t, new(PublicTestSuite))
+func (suite *PublicTestSuite) TestPublicClient_Status() {
+	status, err := suite.client.Status(context.TODO())
+	suite.Require().NoError(err)
+	suite.Require().Equal(valr.StatusOnline, status)
 }

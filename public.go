@@ -295,10 +295,12 @@ func (c *client) Status(ctx context.Context) (Status, error) {
 			"code received", res.StatusCode)
 	}
 
-	var status Status
-	if err = res.JSON(&status); err != nil {
+	statusObj := struct {
+		Status Status
+	}{}
+	if err = res.JSON(&statusObj); err != nil {
 		return StatusUnknown, fmt.Errorf("failed to unmarshal status: %w", err)
 	}
 
-	return status, nil
+	return statusObj.Status, nil
 }

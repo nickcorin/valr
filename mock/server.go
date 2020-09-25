@@ -26,9 +26,12 @@ func NewServer() *Server {
 func registerRoutes(r *mux.Router) {
 	r.HandleFunc("/public/currencies", makeHandler("currencies.json"))
 	r.HandleFunc("/public/pairs", makeHandler("currencyPairs.json"))
-	r.HandleFunc("/public/{currencyPair}/orderbook",
-		makeHandler("orderBook.json"))
+	r.HandleFunc("/public/{pair}/orderbook", makeHandler("orderBook.json"))
+	r.HandleFunc("/public/marketsummary", makeHandler("marketSummaries.json"))
+	r.HandleFunc("/public/{pair}/marketsummary",
+		makeHandler("marketSummary.json"))
 	r.HandleFunc("/public/ordertypes", makeHandler("orderTypes.json"))
+	r.HandleFunc("/public/status", makeHandler("status.json"))
 	r.HandleFunc("/public/time", makeHandler("serverTime.json"))
 }
 
