@@ -31,6 +31,8 @@ func registerRoutes(r *mux.Router) {
 	r.HandleFunc("/public/{pair}/marketsummary",
 		makeHandler("marketSummary.json"))
 	r.HandleFunc("/public/ordertypes", makeHandler("orderTypes.json"))
+	r.HandleFunc("/public/{pair}/ordertypes",
+		makeHandler("orderTypesForCurrency.json"))
 	r.HandleFunc("/public/status", makeHandler("status.json"))
 	r.HandleFunc("/public/time", makeHandler("serverTime.json"))
 }

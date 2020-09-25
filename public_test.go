@@ -20,7 +20,6 @@ type PublicTestSuite struct {
 	server *mock.Server
 }
 
-
 func (suite *PublicTestSuite) SetupSuite() {
 	suite.server = mock.NewServer()
 	suite.client = valr.NewClientForTesting(suite.T(), suite.server.URL)
@@ -73,15 +72,15 @@ func (suite *PublicTestSuite) TestPublicClient_MarketSummary() {
 	suite.Require().NotNil(summary)
 
 	btczar := valr.MarketSummary{
-		AskPrice: "10000",
-		BaseVolume: "0.16065663",
-		BidPrice: "7005",
+		AskPrice:           "10000",
+		BaseVolume:         "0.16065663",
+		BidPrice:           "7005",
 		ChangeFromPrevious: "0",
-		CurrencyPair: "BTCZAR",
-		CreatedAt: time.Date(2019, 4, 20, 13, 02, 03, 228000000, time.UTC),
-		HighPrice: "10000",
-		LastTradedPrice: "7005",
-		LowPrice: "7005",
+		CurrencyPair:       "BTCZAR",
+		CreatedAt:          time.Date(2019, 4, 20, 13, 02, 03, 228000000, time.UTC),
+		HighPrice:          "10000",
+		LastTradedPrice:    "7005",
+		LowPrice:           "7005",
 		PreviousClosePrice: "7005",
 	}
 
@@ -95,15 +94,15 @@ func (suite *PublicTestSuite) TestPublicClient_MarketSummaryForCurrency() {
 	suite.Require().NotNil(summary)
 
 	btczar := &valr.MarketSummary{
-		AskPrice: "10000",
-		BaseVolume: "0.16065663",
-		BidPrice: "7005",
+		AskPrice:           "10000",
+		BaseVolume:         "0.16065663",
+		BidPrice:           "7005",
 		ChangeFromPrevious: "0",
-		CurrencyPair: "BTCZAR",
-		CreatedAt: time.Date(2019, 4, 20, 13, 03, 03, 230000000, time.UTC),
-		HighPrice: "10000",
-		LastTradedPrice: "7005",
-		LowPrice: "7005",
+		CurrencyPair:       "BTCZAR",
+		CreatedAt:          time.Date(2019, 4, 20, 13, 03, 03, 230000000, time.UTC),
+		HighPrice:          "10000",
+		LastTradedPrice:    "7005",
+		LowPrice:           "7005",
 		PreviousClosePrice: "7005",
 	}
 
@@ -152,6 +151,22 @@ func (suite *PublicTestSuite) TestPublicClient_OrderTypes() {
 
 	for k, v := range btczar {
 		suite.Require().Equal(v, types["BTCZAR"][k])
+	}
+}
+
+func (suite *PublicTestSuite) TestPublicClient_OrderTypesForCurrency() {
+	types, err := suite.client.OrderTypesForCurrency(context.TODO(), "BTCZAR")
+	suite.Require().NoError(err)
+	suite.Require().NotNil(types)
+
+	btczar := map[valr.OrderType]bool{
+		valr.OrderTypePostOnly: true,
+		valr.OrderTypeLimit:    true,
+		valr.OrderTypeMarket:   true,
+	}
+
+	for k, v := range btczar {
+		suite.Require().Equal(v, types[k])
 	}
 }
 
