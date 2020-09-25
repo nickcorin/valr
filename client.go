@@ -88,7 +88,7 @@ type Client interface {
 	PublicClient
 }
 
-var defaultBaseURL = "https://api.valr.com/api/v1"
+var defaultBaseURL = "https://api.valr.com/v1"
 
 // DefaultClient is a VALR client initialized with default values. This should
 // be sufficient for callers only using the
