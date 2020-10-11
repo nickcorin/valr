@@ -24,6 +24,13 @@ func NewServer() *Server {
 }
 
 func registerRoutes(r *mux.Router) {
+	// Accounts.
+	r.HandleFunc("/account/balances", makeHandler("accountBalances.json"))
+	r.HandleFunc("/account/{pair}/tradehistory", makeHandler("tradehistory.json"))
+	r.HandleFunc("/account/transactionhistory",
+		makeHandler("transactionHistory.json"))
+
+	// Public.
 	r.HandleFunc("/public/currencies", makeHandler("currencies.json"))
 	r.HandleFunc("/public/pairs", makeHandler("currencyPairs.json"))
 	r.HandleFunc("/public/{pair}/orderbook", makeHandler("orderBook.json"))
@@ -36,10 +43,9 @@ func registerRoutes(r *mux.Router) {
 	r.HandleFunc("/public/status", makeHandler("status.json"))
 	r.HandleFunc("/public/time", makeHandler("serverTime.json"))
 
-	r.HandleFunc("/account/balances", makeHandler("accountBalances.json"))
-	r.HandleFunc("/account/{pair}/tradehistory", makeHandler("tradehistory.json"))
-	r.HandleFunc("/account/transactionhistory",
-		makeHandler("transactionHistory.json"))
+	// Crypto
+	r.HandleFunc("/wallet/crypto/{currency}/deposit/address",
+		makeHandler("depositaddress.json"))
 }
 
 const testDir = "mock/testdata"

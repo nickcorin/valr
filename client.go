@@ -23,6 +23,11 @@ type PrivateClient interface {
 	// Balances returns the list of all wallets with their respective balances.
 	Balances(ctx context.Context) ([]Balance, error)
 
+	// DepositAddress returns the default deposit address with a specified
+	// currency.
+	DepositAddress(ctx context.Context, currency string) (*DepositAddress,
+		error)
+
 	// TradeHistory gets the last 100 trades for a given currency pair for your
 	// account.
 	TradeHistory(ctx context.Context, pair string) ([]Trade, error)
