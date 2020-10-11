@@ -1,0 +1,128 @@
+
+
+[
+  {
+    "transactionType": {
+      "type": "REFERRAL_REBATE",
+      "description": "Referral Rebate"
+    },
+    "creditCurrency": "BTC",
+    "creditValue": "0.0000003",
+    "eventAt": "2019-05-07T10:55:09.949Z"
+  },
+  {
+    "transactionType": {
+      "type": "LIMIT_BUY",
+      "description": "Limit Buy"
+    },
+    "debitCurrency": "ZAR",
+    "debitValue": "83",
+    "creditCurrency": "BTC",
+    "creditValue": "0.000998",
+    "feeCurrency": "BTC",
+    "feeValue": "0.000002",
+    "eventAt": "2019-05-07T09:45:26.305Z",
+    "additionalInfo": {
+      "costPerCoin": 83000,
+      "costPerCoinSymbol": "R",
+      "currencyPairSymbol": "BTCZAR",
+      "orderId": "53b5b9ba-985a-404d-9e76-e6981da459af"
+    }
+  },
+  {
+    "transactionType": {
+      "type": "LIMIT_SELL",
+      "description": "Limit Sell"
+    },
+    "debitCurrency": "BTC",
+    "debitValue": "0.001",
+    "creditCurrency": "ZAR",
+    "creditValue": "81.83",
+    "feeCurrency": "ZAR",
+    "feeValue": "0.16",
+    "eventAt": "2019-05-07T09:45:13.971Z",
+    "additionalInfo": {
+      "costPerCoin": 82000,
+      "costPerCoinSymbol": "R",
+      "currencyPairSymbol": "BTCZAR",
+      "orderId": "66a8f504-4de1-40f7-850c-4cec176fbafc"
+    }
+  },
+  {
+    "transactionType": {
+      "type": "MARKET_SELL",
+      "description": "Market Sell"
+    },
+    "debitCurrency": "BTC",
+    "debitValue": "0.0001",
+    "creditCurrency": "ZAR",
+    "creditValue": "8.18",
+    "feeCurrency": "ZAR",
+    "feeValue": "0.01",
+    "eventAt": "2019-05-07T09:43:21.440Z",
+    "additionalInfo": {
+      "costPerCoin": 82000,
+      "costPerCoinSymbol": "R",
+      "currencyPairSymbol": "BTCZAR",
+      "orderId": "f0f1c363-1e38-4dc3-b3f8-cd5bcbe2f2bb"
+    }
+  },
+  {
+    "transactionType": {
+      "type": "MARKET_BUY",
+      "description": "Market Buy"
+    },
+    "debitCurrency": "ZAR",
+    "debitValue": "10",
+    "creditCurrency": "BTC",
+    "creditValue": "0.00012024",
+    "feeCurrency": "BTC",
+    "feeValue": "0.00000024",
+    "eventAt": "2019-05-07T09:43:14.172Z",
+    "additionalInfo": {
+      "costPerCoin": 83000,
+      "costPerCoinSymbol": "R",
+      "currencyPairSymbol": "BTCZAR",
+      "orderId": "b54efe73-7f36-4065-b419-69dd0d88763c"
+    }
+  },
+  {
+    "transactionType": {
+      "type": "SIMPLE_SELL",
+      "description": "Simple Sell"
+    },
+    "debitCurrency": "BTC",
+    "debitValue": "0.0001",
+    "creditCurrency": "ZAR",
+    "creditValue": "7.94",
+    "feeCurrency": "ZAR",
+    "feeValue": "0.06",
+    "eventAt": "2019-05-07T06:32:00.742Z",
+    "additionalInfo": {
+      "costPerCoin": 80000,
+      "costPerCoinSymbol": "R",
+      "currencyPairSymbol": "BTCZAR",
+      "orderId": "2f41b4fc-ad93-4f4b-b830-6d43eecf2ff6"
+    }
+  },
+  {
+    "transactionType": {
+      "type": "SIMPLE_BUY",
+      "description": "Simple Buy"
+    },
+    "debitCurrency": "ZAR",
+    "debitValue": "10",
+    "creditCurrency": "BTC",
+    "creditValue": "0.00012253",
+    "feeCurrency": "BTC",
+    "feeValue": "0.00000092",
+    "eventAt": "2019-05-07T06:31:36.528Z",
+    "additionalInfo": {
+      "costPerCoin": 81000,
+      "costPerCoinSymbol": "R",
+      "currencyPairSymbol": "BTCZAR",
+      "orderId": "9beb9d6d-9e42-4cd3-bc1c-92e08714126b"
+    }
+  }
+]
+

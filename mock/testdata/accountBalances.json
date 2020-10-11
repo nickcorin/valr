@@ -1,0 +1,423 @@
+[
+  {
+    "currency": "ETH",
+    "available": "0.01626594758",
+    "reserved": "0.49",
+    "total": "0.50626594758",
+    "updatedAt": "2020-05-31T05:10:16.522Z"
+  },
+  {
+    "currency": "LTC",
+    "available": "1.57270565",
+    "reserved": "0",
+    "total": "1.57270565",
+    "updatedAt": "2020-05-11T18:42:17.953Z"
+  },
+  {
+    "currency": "TRX",
+    "available": "1239.60002419",
+    "reserved": "0",
+    "total": "1239.60002419",
+    "updatedAt": "2020-05-11T18:52:39.908Z"
+  },
+  {
+    "currency": "BCH",
+    "available": "0.13232419",
+    "reserved": "0",
+    "total": "0.13232419",
+    "updatedAt": "2020-05-11T18:46:25.120Z"
+  },
+  {
+    "currency": "XMR",
+    "available": "0.53706004",
+    "reserved": "0",
+    "total": "0.53706004",
+    "updatedAt": "2020-05-11T18:52:39.908Z"
+  },
+  {
+    "currency": "ADA",
+    "available": "1278.49713883",
+    "reserved": "0",
+    "total": "1278.49713883",
+    "updatedAt": "2020-05-11T18:56:47.491Z"
+  },
+  {
+    "currency": "BTC",
+    "available": "0.044511644725",
+    "reserved": "0.01",
+    "total": "0.054511644725",
+    "updatedAt": "2020-05-31T05:02:18.186Z"
+  },
+  {
+    "currency": "PAY",
+    "available": "12.95057902",
+    "reserved": "0",
+    "total": "12.95057902",
+    "updatedAt": "2020-05-11T18:34:59.616Z"
+  },
+  {
+    "currency": "DASH",
+    "available": "0.04275828",
+    "reserved": "0",
+    "total": "0.04275828",
+    "updatedAt": "2020-05-11T18:35:10.992Z"
+  },
+  {
+    "currency": "ZEC",
+    "available": "0.25207765",
+    "reserved": "0",
+    "total": "0.25207765",
+    "updatedAt": "2020-05-11T18:35:10.992Z"
+  },
+  {
+    "currency": "DOGE",
+    "available": "107.92307692",
+    "reserved": "0",
+    "total": "107.92307692",
+    "updatedAt": "2020-05-11T18:35:10.992Z"
+  },
+  {
+    "currency": "ZAR",
+    "available": "46.67108319597",
+    "reserved": "4200.42325067",
+    "total": "4247.09433386597",
+    "updatedAt": "2020-05-31T05:15:29.710Z"
+  },
+  {
+    "currency": "XRP",
+    "available": "0.00000633",
+    "reserved": "503.2908",
+    "total": "503.29080633",
+    "updatedAt": "2020-05-24T16:45:09.475Z"
+  },
+  {
+    "currency": "XLM",
+    "available": "365.96561693",
+    "reserved": "0",
+    "total": "365.96561693",
+    "updatedAt": "2020-05-11T18:42:17.958Z"
+  },
+  {
+    "currency": "BSV",
+    "available": "0.15629299",
+    "reserved": "0",
+    "total": "0.15629299",
+    "updatedAt": "2020-05-11T18:53:48.277Z"
+  },
+  {
+    "currency": "BAT",
+    "available": "38.15891901",
+    "reserved": "0",
+    "total": "38.15891901",
+    "updatedAt": "2020-05-11T18:57:57.610Z"
+  },
+  {
+    "currency": "EOS",
+    "available": "3.17856089",
+    "reserved": "0",
+    "total": "3.17856089",
+    "updatedAt": "2020-05-11T18:57:57.610Z"
+  },
+  {
+    "currency": "VET",
+    "available": "1447.82681123",
+    "reserved": "0",
+    "total": "1447.82681123",
+    "updatedAt": "2020-05-11T18:57:57.634Z"
+  },
+  {
+    "currency": "LINK",
+    "available": "4.01629932",
+    "reserved": "0",
+    "total": "4.01629932",
+    "updatedAt": "2020-05-11T18:57:57.670Z"
+  },
+  {
+    "currency": "XEM",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "PIVX",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "LSK",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "ETC",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "REP",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "GNT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "GNO",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "SC",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "OMG",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "CVC",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "QTUM",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "ZRX",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "TUSD",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "SNT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "GAME",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "DCR",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "ANT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "DNT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "BNT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "RLC",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "WAVES",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "STORJ",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "RCN",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "DGB",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "SLR",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "MONA",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "EXP",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "VIB",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "STORM",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "VTC",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "KMD",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "DAI",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "GRIN",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "XTZ",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "QNT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "XTP",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "CRO",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "USDT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "SWT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "MLN",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "SALT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "GUP",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "NMR",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "WINGS",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "GRS",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "FCT",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "OCN",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  },
+  {
+    "currency": "POLY",
+    "available": "0",
+    "reserved": "0",
+    "total": "0"
+  }
+]
