@@ -13,12 +13,19 @@ import (
 	"testing"
 	"time"
 
+	"github.com/gorilla/schema"
 	"github.com/nickcorin/snorlax"
 )
 
 // PrivateClient contains methods that require authentication in order to access
 // and have more relaxed rate limiting rules.
 type PrivateClient interface {
+	// Balances returns the list of all wallets with their respective balances.
+	Balances(ctx context.Context) ([]Balance, error)
+
+	// TransactionHistory returns the list of all activities for your account.
+	TransactionHistory(ctx context.Context, req *TransactionHistoryRequest) (
+		[]Transaction, error)
 }
 
 // PublicClient contains methods that do not require authentication in order to
@@ -95,6 +102,7 @@ var defaultBaseURL = "https://api.valr.com/v1"
 var DefaultClient PublicClient = &client{
 	apiKey:    "",
 	apiSecret: "",
+	encoder:   schema.NewEncoder(),
 	httpClient: snorlax.DefaultClient.
 		SetBaseURL(defaultBaseURL).
 		SetHeader(http.CanonicalHeaderKey("Content-Type"), "application/json"),
@@ -130,6 +138,7 @@ type client struct {
 	apiKey     string
 	apiSecret  string
 	baseURL    string
+	encoder    *schema.Encoder
 	httpClient snorlax.Client
 }
 
@@ -141,14 +150,18 @@ func authenticationHook(key, secret string) snorlax.RequestHook {
 			return nil
 		}
 
-		bodyReader, err := r.GetBody()
-		if err != nil {
-			return fmt.Errorf("failed to get request body: %w", err)
-		}
+		var body []byte
+		if r.GetBody != nil {
+			bodyReader, err := r.GetBody()
+			if err != nil {
+				return fmt.Errorf("failed to get request body: %w", err)
+			}
+			defer bodyReader.Close()
 
-		body, err := ioutil.ReadAll(bodyReader)
-		if err != nil {
-			return fmt.Errorf("failed to read request body: %w", err)
+			body, err = ioutil.ReadAll(bodyReader)
+			if err != nil {
+				return fmt.Errorf("failed to read request body: %w", err)
+			}
 		}
 
 		timestamp := strconv.FormatInt(time.Now().UnixNano()/1e6, 10)

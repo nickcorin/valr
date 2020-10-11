@@ -35,6 +35,10 @@ func registerRoutes(r *mux.Router) {
 		makeHandler("orderTypesForCurrency.json"))
 	r.HandleFunc("/public/status", makeHandler("status.json"))
 	r.HandleFunc("/public/time", makeHandler("serverTime.json"))
+
+	r.HandleFunc("/account/balances", makeHandler("accountBalances.json"))
+	r.HandleFunc("/accounts/transactionhistory",
+		makeHandler("transactionHistory.json"))
 }
 
 const testDir = "mock/testdata"
