@@ -45,6 +45,27 @@ func (suite *accountTestSuite) TestPrivateClient_Balances() {
 	suite.Require().EqualValues(eth, balances[0])
 }
 
+func (suite *accountTestSuite) TestPrivateClient_TradeHistory() {
+	history, err := suite.client.TradeHistory(context.TODO(),
+		"BTCZAR")
+	suite.Require().NoError(err)
+	suite.Require().NotNil(history)
+
+	trades := []valr.Trade{
+		{
+			CurrencyPair: "BTCZAR",
+			ID:           10634,
+			Price:        "87000",
+			Quantity:     "0.0001",
+			Side:         "buy",
+			TradedAt: time.Date(2019, 5, 13, 15, 14, 48, 422000000,
+				time.UTC),
+		},
+	}
+
+	suite.Require().Contains(history, trades[0])
+}
+
 func (suite *accountTestSuite) TestPrivateClient_TransactionHistory() {
 	history, err := suite.client.TransactionHistory(context.TODO(),
 		&valr.TransactionHistoryRequest{})

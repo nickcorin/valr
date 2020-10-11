@@ -37,7 +37,8 @@ func registerRoutes(r *mux.Router) {
 	r.HandleFunc("/public/time", makeHandler("serverTime.json"))
 
 	r.HandleFunc("/account/balances", makeHandler("accountBalances.json"))
-	r.HandleFunc("/accounts/transactionhistory",
+	r.HandleFunc("/account/{pair}/tradehistory", makeHandler("tradehistory.json"))
+	r.HandleFunc("/account/transactionhistory",
 		makeHandler("transactionHistory.json"))
 }
 

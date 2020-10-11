@@ -1,0 +1,130 @@
+[ 
+  {
+    "price": "87000",
+    "quantity": "0.0001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-13T15:14:48.422Z",
+    "side": "buy",
+    "tradeId": 10634
+  },
+  {
+    "price": "87000",
+    "quantity": "0.0137931",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-10T09:47:20.804Z",
+    "side": "buy",
+    "tradeId": 10633
+  },
+  {
+    "price": "80000",
+    "quantity": "0.09830742",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-09T20:24:16.491Z",
+    "side": "sell",
+    "tradeId": 10632
+  },
+  {
+    "price": "82000",
+    "quantity": "0.00169257",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-09T20:24:16.491Z",
+    "side": "sell",
+    "tradeId": 10631
+  },
+  {
+    "price": "83000",
+    "quantity": "0.08999999",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-09T20:22:05.521Z",
+    "side": "sell",
+    "tradeId": 10629
+  },
+  {
+    "price": "82000",
+    "quantity": "0.01",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-09T20:22:05.521Z",
+    "side": "sell",
+    "tradeId": 10630
+  },
+  {
+    "price": "83000",
+    "quantity": "0.001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T09:45:26.305Z",
+    "side": "buy",
+    "tradeId": 10617
+  },
+  {
+    "price": "82000",
+    "quantity": "0.001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T09:45:13.971Z",
+    "side": "sell",
+    "tradeId": 10616
+  },
+  {
+    "price": "82000",
+    "quantity": "0.0001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T09:43:21.440Z",
+    "side": "sell",
+    "tradeId": 10615
+  },
+  {
+    "price": "83000",
+    "quantity": "0.00012048",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T09:43:14.172Z",
+    "side": "buy",
+    "tradeId": 10614
+  },
+  {
+    "price": "80000",
+    "quantity": "0.0001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T06:33:01.986Z",
+    "side": "sell",
+    "tradeId": 10608
+  },
+  {
+    "price": "81000",
+    "quantity": "0.00012345",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T06:32:55.925Z",
+    "side": "buy",
+    "tradeId": 10607
+  },
+  {
+    "price": "80000",
+    "quantity": "0.001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T06:32:47.282Z",
+    "side": "sell",
+    "tradeId": 10606
+  },
+  {
+    "price": "81000",
+    "quantity": "0.001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T06:32:27.166Z",
+    "side": "buy",
+    "tradeId": 10605
+  },
+  {
+    "price": "80000",
+    "quantity": "0.0001",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T06:32:00.742Z",
+    "side": "sell",
+    "tradeId": 10604
+  },
+  {
+    "price": "81000",
+    "quantity": "0.00012345",
+    "currencyPair": "BTCZAR",
+    "tradedAt": "2019-05-07T06:31:36.528Z",
+    "side": "buy",
+    "tradeId": 10603
+  }
+]

@@ -35,6 +35,39 @@ func (c *client) Balances(ctx context.Context) ([]Balance, error) {
 	return balances, nil
 }
 
+// Trade contains information regarding a single trade which has been executed.
+type Trade struct {
+	CurrencyPair string    `json:"currencyPair"`
+	ID           int64     `json:"tradeId"`
+	Price        string    `json:"price"`
+	Quantity     string    `json:"quantity"`
+	Side         string    `json:"side"`
+	TradedAt     time.Time `json:"tradedAt"`
+}
+
+// TradeHistory gets the last 100 recent trades for a given currency pair for
+// your account.
+func (c *client) TradeHistory(ctx context.Context, pair string) ([]Trade,
+	error) {
+	res, err := c.httpClient.Get(ctx, fmt.Sprintf("/account/%s/tradehistory",
+		pair), nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch transaction history: %w", err)
+	}
+
+	if !res.IsSuccess() {
+		return nil, fmt.Errorf("failed to fetch transaction history: %d "+
+			"status code recevied", res.StatusCode)
+	}
+
+	var trades []Trade
+	if err = res.JSON(&trades); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal trades: %w", err)
+	}
+
+	return trades, nil
+}
+
 // Transaction contains information regarding certain activities of your
 // wallets.
 type Transaction struct {
@@ -125,7 +158,7 @@ func (c *client) TransactionHistory(ctx context.Context,
 		return nil, fmt.Errorf("failed to encode request params: %w", err)
 	}
 
-	res, err := c.httpClient.Get(ctx, "/accounts/transactionhistory", params)
+	res, err := c.httpClient.Get(ctx, "/account/transactionhistory", params)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch transaction history: %w", err)
 	}
@@ -137,7 +170,7 @@ func (c *client) TransactionHistory(ctx context.Context,
 
 	var transactions []Transaction
 	if err = res.JSON(&transactions); err != nil {
-
+		return nil, fmt.Errorf("failed to unmarshal transactions: %w", err)
 	}
 
 	return transactions, nil

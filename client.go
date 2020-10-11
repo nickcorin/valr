@@ -23,6 +23,10 @@ type PrivateClient interface {
 	// Balances returns the list of all wallets with their respective balances.
 	Balances(ctx context.Context) ([]Balance, error)
 
+	// TradeHistory gets the last 100 trades for a given currency pair for your
+	// account.
+	TradeHistory(ctx context.Context, pair string) ([]Trade, error)
+
 	// TransactionHistory returns the list of all activities for your account.
 	TransactionHistory(ctx context.Context, req *TransactionHistoryRequest) (
 		[]Transaction, error)
