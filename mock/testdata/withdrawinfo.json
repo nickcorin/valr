@@ -1,0 +1,10 @@
+
+
+{
+  "currency": "BTC",
+  "minimumWithdrawAmount": "0.0002",
+  "isActive": true,
+  "withdrawCost": "0.0004",
+  "supportsPaymentReference": false
+}
+
