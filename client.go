@@ -35,6 +35,12 @@ type PrivateClient interface {
 	// TransactionHistory returns the list of all activities for your account.
 	TransactionHistory(ctx context.Context, req *TransactionHistoryRequest) (
 		[]Transaction, error)
+
+	// WithdrawalInfo gets all the information about withdrawing a given
+	// currency from your VALR account. That will include withdrawal costs,
+	// minimum withdrawal amount, etc.
+	WithdrawalInfo(ctx context.Context, currency string) (*WithdrawalInfo,
+		error)
 }
 
 // PublicClient contains methods that do not require authentication in order to

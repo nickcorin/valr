@@ -46,6 +46,8 @@ func registerRoutes(r *mux.Router) {
 	// Crypto
 	r.HandleFunc("/wallet/crypto/{currency}/deposit/address",
 		makeHandler("depositaddress.json"))
+	r.HandleFunc("/wallet/crypto/{currency}/withdraw",
+		makeHandler("withdrawinfo.json"))
 }
 
 const testDir = "mock/testdata"

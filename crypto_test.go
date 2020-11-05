@@ -36,3 +36,19 @@ func (suite *cryptoTestSuite) TestDepositAddress() {
 
 	suite.Require().EqualValues(&eth, addr)
 }
+
+func (suite *cryptoTestSuite) TestWithdrawalInfo() {
+	info, err := suite.client.WithdrawalInfo(context.TODO(), "BTC")
+	suite.Require().NoError(err)
+	suite.Require().NotNil(info)
+
+	btc := valr.WithdrawalInfo{
+		Currency:            "BTC",
+		IsActive:            true,
+		MinWithdrawalAmount: "0.0002",
+		SupportsPaymentRef:  false,
+		WithdrawalCost:      "0.0004",
+	}
+
+	suite.Require().EqualValues(&btc, info)
+}
