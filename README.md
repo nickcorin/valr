@@ -32,7 +32,8 @@ func main() {
 
 #### Using the DefaultClient.
 ```golang
-// The default (public) client can access all public endpoints without providing authentication.
+// The default (public) client can access all public endpoints without
+// providing authentication.
 ctx := context.Background()
 book, err := valr.DefaultClient.OrderBook(ctx, "BTCZAR")
 if err != nil {
@@ -42,7 +43,8 @@ if err != nil {
 
 #### Accessing authenticated endpoints.
 ```golang
-// To access authentiated endpoints, you need to construct a (private) client.
+// To access authentiated endpoints, you need to construct a (private)
+// client.
 client := valr.NewClient("my-api-key", "my-api-secret")
 
 ctx := context.Background()
@@ -74,15 +76,6 @@ private = valr.ToPrivateClient(public, "my-api-key", "my-api-secret")
 // ...or vice versa.
 public = valr.ToPublicClient(private)
 
-```
-
-#### Fetching the Order Book.
-```golang
-ctx := context.Background()
-book, err := client.OrderBook(ctx, "BTCZAR")
-if err != nil {
-	log.Fatal(err)
-}
 ```
 
 ## Contributing
