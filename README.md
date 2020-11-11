@@ -30,6 +30,35 @@ func main() {
 
 ## Usage
 
+#### Using the DefaultClient.
+```golang
+// The default (public) client can access all public endpoints without providing authentication.
+ctx := context.Background()
+book, err := valr.DefaultClient.OrderBook(ctx, "BTCZAR")
+if err != nil {
+  log.Fatal(err)
+}
+```
+
+#### Accessing authenticated endpoints.
+```golang
+// To access authentiated endpoints, you need to construct a (private) client.
+client := valr.NewClient("my-api-key", "my-api-secret")
+
+ctx := context.Background()
+orderID, err := client.LimitOrder(ctx, valr.LimitOrderRequest{
+  CustomerOrderID:  "1234",
+  Pair:             "BTCZAR",
+  PostOnly:         true,
+  Price:            "200000",
+  Quantity:         "0.100000",
+  Side:             "SELL",
+})
+if err != nil {
+  log.Fatal(err)
+}
+```
+
 #### Public vs Private clients.
 ```golang
 
@@ -37,41 +66,23 @@ func main() {
 public := valr.NewPublicClient()
 
 // A normal (or private) client is able to access all endpoints.
-private := valr.NewClient("k3y", "s3cr3t")
+private := valr.NewClient("my-api-key", "my-api-secret")
 
 // You can convert a public client to a private client if ou want to.
-private = valr.ToPrivateClient(public, "k3y", "s3cr3t")
+private = valr.ToPrivateClient(public, "my-api-key", "my-api-secret")
 
 // ...or vice versa.
 public = valr.ToPublicClient(private)
 
 ```
 
-#### Configuring the client.
-```golang
-client := valr.DefaultClient
-
-client.SetProxyURL("https://proxy.example.com").SetHeader("X-Powered-By", "valr")
-```
-
 #### Fetching the Order Book.
 ```golang
-book, err := client.OrderBook(context.Background(), "BTCZAR")
+ctx := context.Background()
+book, err := client.OrderBook(ctx, "BTCZAR")
 if err != nil {
 	log.Fatal(err)
 }
-```
-
-#### Advanced configuration.
-By default, the underlying HTTP client used is a [Snorlax client](https://github.com/nickcorin/snorlax).
-Check the documentation to see all the configuration options.
-```golang
-// You can create your own custom HTTP client.
-customClient := snorlax.DefaultClient.SetProxy("https://www.example.com")
-
-// ...and use it for the VALR client.
-valrClient := valr.NewClient().SetHTTPClient(customClient)
-
 ```
 
 ## Contributing
